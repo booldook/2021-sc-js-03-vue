@@ -14,7 +14,7 @@
 	<div id="app">
 		<div class="container">
 			<div class="input-wp my-5">
-				<input type="text" class="form-control form-control-lg search" v-model="search" autofocus>
+				<input type="text" class="form-control form-control-lg search" v-model="search" autofocus v-on:keyup="onKeyup">
 				<i class="fa fa-times-circle bt-remove" v-show="search.length" v-on:click="onRemove"></i>
 			</div>
 			<ul class="prd-wrap">
@@ -26,6 +26,7 @@
 			</ul>
 		</div>
 	</div>
+	<script src="../js/lodash.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
 	<script src="../js/02.search.js"></script>
 </body>
