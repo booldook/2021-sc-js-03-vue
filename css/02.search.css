@@ -1,2 +1,6 @@
 .input-wp {position: relative;}
-.input-wp .bt-remove {position: absolute; right: .5em; top: .625em; cursor: pointer;}
+.input-wp .bt-remove {position: absolute; font-size: 1.25em; cursor: pointer; right: .5em; top: 50%; transform: translateY(-50%);}
+.prd-wrap {display: flex; flex-wrap: wrap;}
+.prd-wrap .prd {width: 25%; padding: 1%;}
+.prd-wrap .prd .title {font-size: 1.25em; padding: .5em; background-color: #555; color: #fff;}
+.prd-wrap .prd .price {font-size: 1.25em; color: #920707; text-align: right; padding: .5em;}

@@ -14,13 +14,14 @@
 	<div id="app">
 		<div class="container">
 			<div class="input-wp my-5">
-				<input type="text" class="form-control">
-				<i class="fa fa-times-circle bt-remove"></i>
+				<input type="text" class="form-control form-control-lg search" v-model="search" autofocus>
+				<i class="fa fa-times-circle bt-remove" v-show="search.length" v-on:click="onRemove"></i>
 			</div>
 			<ul class="prd-wrap">
-				<li class="prd">
-					<img src="" alt="">
-					<div class="title"></div>
+				<li class="prd" v-for="v in prds">
+					<img v-bind:src="v.src" v-bind:alt="v.title" class="w-100 img">
+					<div class="title">{{ v.title }}</div>
+					<div class="price">${{ v.price }}</div>
 				</li>
 			</ul>
 		</div>
