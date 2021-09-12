@@ -11,6 +11,26 @@
 	<link rel="stylesheet" href="../css/01.hello.css">
 </head>
 <body>
-	
+	<div id="app">
+		<div class="container my-5">
+			<h1 class="title-wp p-3">{{ title }}</h1>
+			<div class="input-wp p-3">
+				<input type="text" class="form-control" v-model="title">
+			</div>
+			<div class="img-wp p-3">
+				<img v-bind:src="src" alt="">
+			</div>
+			<div class="thumb-wp d-flex">
+				<div><img src="../img/p1.png" class="w-100" v-on:click="showImg" alt="배너1"></div>
+				<div><img src="../img/p2.png" class="w-100" v-on:click="showImg" alt="배너2"></div>
+				<div><img src="../img/p3.png" class="w-100" v-on:click="showImg" alt="배너3"></div>
+				<div><img src="../img/p4.png" class="w-100" v-on:click="showImg" alt="배너4"></div>
+				<div><img src="../img/p5.png" class="w-100" v-on:click="showImg" alt="배너5"></div>
+			</div>
+			<div>{{ src }}</div>
+		</div>
+	</div>
+	<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+	<script src="../js/01.hello.js"></script>
 </body>
 </html>
